@@ -129,7 +129,7 @@ function Login(){
                         <p className='mt-4 mb-0'>o</p>
                     </Col>
                     
-                    <Col xs={{ span: 10, offset: 1 }} className='mt-4 mb4'>
+                    <Col xs={{ span: 10, offset: 1 }} className='mt-4 mb-4'>
 
                         <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' onClick={handleSubmit} >
                             <img src={FacebookIcon} className='me-2' /> Continuar con Facebook

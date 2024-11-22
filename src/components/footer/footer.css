@@ -3,14 +3,17 @@
     color: #FFF;
     z-index: 9;
     max-width: 430px;
-    width: inherit;
+    width: 100vw;
     
 }
 .footer a{
     color: #fff;
     text-decoration: none;
 }
-.icon-button {
+.footer a.menu-item{
+    padding-top: 2px;
+}
+.icon-qr-button {
     background-color: #FFFFFF;
     border: 2px solid #D490FF;
     border-radius: 8px;
@@ -18,10 +21,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0.875em;
+    padding: 0.625em;
 }
 .footer small{
-    font-size: 0.75em;
+    font-size: 0.625em;
     display: block;
     margin-top: 5px;
 }
