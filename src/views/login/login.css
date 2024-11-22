@@ -23,10 +23,12 @@
     border: none;
     border-bottom: solid #999 1px;
     color: var(--primary-text-color);
+    background-color: transparent;
   }
   .validate{
     color: red;
     width: 100%;
     text-align: center;
     bottom: -50px;
+    font-size: 14px;
   }
