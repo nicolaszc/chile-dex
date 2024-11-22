@@ -9,7 +9,7 @@ import axios from 'axios';
 import { useEffect, useState, useRef } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useTwitterConnection} from '@ekaruz/react-social-auth'
-//import useToken from '@/components/auth/useToken'
+import useToken from '@/components/auth/useToken'
 
 import { Button, Form } from 'react-bootstrap'
 import Logo from '@/assets/img/logo_chiledex.svg'
@@ -24,34 +24,31 @@ function Login(){
     const [usermail, setMail] = useState('')
     const [password, setPassword] = useState('')
     const [validate, setValidate] = useState('')
-    //const { setToken } = useToken();
+    const { setToken } = useToken();
     const [type, setType] = useState('password')
     const [iconEye, setIconEye] = useState(<EyeSlash size='24' color='#666' />)
     //const fetcher = useFetcher()
     const REDIRECT_BASE = location.href
     const X_REDIRECT_URI = REDIRECT_BASE + 'x-callback'
     const LOGIN_REDIRECT_URI = '/home'
+    const navigate = useNavigate()
 
-    const validateForm = (e) => {
-        e.preventDefault()
+    const validateForm = () => {
         const emailRegex = /\S+@\S+\.\S+/;
         const isEmailValid = emailRegex.test(usermail);
         const isPasswordValid = password.length > 6; // Example criteria
-        if (isEmailValid && isPasswordValid){
-            submitUser(e)
-        }else{
-            setValidate("Ingrese un correo y contraseña validos");
-            return;
-        }
-        return isEmailValid && isPasswordValid;
+        return isEmailValid && isPasswordValid;   
     }
-    const handleSubmit = async (e) => {
+
+    //const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!validateForm()) {
             setValidate("Ingrese un correo y contraseña validos");
             return;
         }
-        userLogin()
+        setToken('JMJtzsS61mcxf41RdKjqxCU5Rb6g5jJV9iauY2vZegQq7mpi6q3tjG98GxBZleTh');
+        navigate("/home")
     }
     
     function submitUser(e) {
@@ -114,7 +111,7 @@ function Login(){
                     </Col>
                     
                     <Col xs={{ span: 10, offset: 1 }} className='mt-3'>
-                        <Form id='login-form' onSubmit={validateForm} className='login-form' noValidate>
+                        <Form id='login-form' onSubmit={handleSubmit} className='login-form' noValidate>
                             <Form.Group className='mb-3' controlId='formBasicEmail'>
                                 <Form.Control type='email' placeholder='Correo Electrónico' value={usermail} onChange={(e) => setMail(e.target.value)} required/>
                             </Form.Group>
@@ -138,7 +135,7 @@ function Login(){
                             <img src={FacebookIcon} className='me-2' /> Continuar con Facebook
                         </Button>
 
-                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' disabled={isLoading} onClick={onTwitterConnect} >
+                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3'  onClick={handleSubmit} >
                             <img src={XIcon} className='me-2' /> Continuar con X
                         </Button>
 
