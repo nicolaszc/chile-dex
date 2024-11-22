@@ -12,6 +12,7 @@ import Home from '@/views/home/Home'
 import Heritage from '@/views/heritage/Heritage'
 import Agenda from '@/views/agenda/Agenda'
 import Profile from '@/views/profile/Profile'
+import Visited from '@/views/heritage/Visited'
 //import useToken from '@/components/auth/useToken'
 
 import '@/App.css'
@@ -34,6 +35,7 @@ function App() {
           <Route path='/heritage' element={<Heritage />} />   
           <Route path='/agenda' element={<Agenda />} /> 
           <Route path='/profile' element={<Profile />} />  
+          <Route path='/visited' element={<Visited />} />  
       </Routes> 
   
   );

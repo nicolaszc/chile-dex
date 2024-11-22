@@ -3,6 +3,7 @@ import React from 'react'
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css' */
 import { Row, Col, Button } from 'react-bootstrap'
+import { NavLink, useLocation } from 'react-router-dom'
 import Wrapper from '@/layouts/Wrapper';
 import HomeGallery from '@/layouts/HomeGallery';
 
@@ -27,12 +28,12 @@ function Home() {
             </Row>
             <Row>
                 <Col xs={6} className='d-flex'>
-                    <Button variant='outline-secondary heritage' className='w-100 p-4 rounded-4 d-flex flex-column align-items-center justify-content-center'>
+                    <NavLink to='/visited' className=' btn btn-outline-secondary heritage w-100 p-4 rounded-4 d-flex flex-column align-items-center justify-content-center'>
                        
                             <img src={iconoPatrimonio} className='w-25 mx-auto' />
                             <p className='pt-3 mb-0 fw-semibold'>Patrimonios visitados</p>
                                             
-                    </Button>
+                    </NavLink>
                 </Col>
                 <Col xs={6} className='d-flex'>
                     <Button variant='primary routes' className='w-100 p-4 rounded-4 d-flex flex-column align-items-center justify-content-center'>

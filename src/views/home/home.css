@@ -2,6 +2,7 @@
     border-color: #ccc;
     background-color: #fff;
     justify-content: center!important;
+    color: black;
 }
 .btn-outline-secondary.routes{
     justify-content: center!important;
