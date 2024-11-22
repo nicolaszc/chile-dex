@@ -1,0 +1,27 @@
+.footer{
+    background-color: var(--primary-color);
+    color: #FFF;
+    z-index: 9;
+    max-width: 430px;
+    width: inherit;
+    
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+.icon-button {
+    background-color: #FFFFFF;
+    border: 2px solid #D490FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.875em;
+}
+.footer small{
+    font-size: 0.75em;
+    display: block;
+    margin-top: 5px;
+}

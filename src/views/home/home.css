@@ -1,0 +1,12 @@
+.btn-outline-secondary.heritage{
+    border-color: #ccc;
+    background-color: #fff;
+    justify-content: center!important;
+}
+.btn-outline-secondary.routes{
+    justify-content: center!important;
+}
+.chart{
+    border: 1px solid #ccc;
+
+}
