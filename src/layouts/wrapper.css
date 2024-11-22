@@ -1,7 +1,7 @@
 .wrapper{
     position: relative;
     z-index: 1;
-    padding-bottom: 150px;
+    padding-bottom: 120px;
 }
 .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl{
     width: 100%!important;
