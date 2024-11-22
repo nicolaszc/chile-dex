@@ -145,7 +145,7 @@ function Login(){
 
                     </Col>
 
-                    <p className='mb-5'>¿No tienes cuenta? <NavLink to='/register' >Regístrate</NavLink></p>
+                    <p className='mb-0'>¿No tienes cuenta? <NavLink to='/register' >Regístrate</NavLink></p>
                 </Row> 
             </Wrapper>                    
         </>
