@@ -106,7 +106,7 @@ function Login(){
         <>
             <Wrapper>
                 <Row>
-                    <Col xs={{ span: 8, offset: 2 }} className='mt-4 mb-5 px-4'>
+                    <Col xs={{ span: 8, offset: 2 }} className='mt-4 mb-4 px-4'>
                         <img src={Logo} className='w-75 mx-auto' />
                     </Col>
                     
