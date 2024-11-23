@@ -7,7 +7,7 @@ import { ArrowLeft, Filter, Search } from 'react-bootstrap-icons';
 import Moneda from '@/assets/img/palacio-moneda.png'
 import Museomemoria from '@/assets/img/museo-memoria.png'
 
-import './heritage.css'
+import './visited.css'
 
 function Visited() {
     console.log('heritage')
