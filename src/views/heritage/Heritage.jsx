@@ -135,7 +135,7 @@ const Heritage = () => {
         center={center}
         options={options}
       >
-        <Marker position={center} />
+       {/*  <Marker position={center} /> */}
       </GoogleMap>
     </div>
   );
