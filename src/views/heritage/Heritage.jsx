@@ -15,7 +15,6 @@ const center = {
   lng: -70.650, // default longitude
 };
 const options = {
-  panControl: false,
   zoomControl:false,
   mapTypeControl: false,
   scrollwheel: false,
