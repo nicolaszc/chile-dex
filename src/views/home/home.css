@@ -1,3 +1,11 @@
+/* botones superiores y gráfico*/
+.btn-outline-primary.visit-plan{
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    justify-content: center!important;
+    color: white;
+}
+
 .btn-outline-secondary.heritage{
     border-color: #ccc;
     background-color: #fff;
@@ -10,4 +18,77 @@
 .chart{
     border: 1px solid #ccc;
 
+}
+
+/*patrimonios más visitados*/
+
+.text-start{
+    font-weight: 700;
+}
+
+.image-holder{
+    object-fit: cover;
+    height: 175px;
+    position: relative;
+}
+
+.image-holder-mini{
+    object-fit: cover;
+    height: 150px;
+    width: 191px;
+    position: relative;
+}
+
+.text-overlay{
+    position: absolute;
+    top: 40%;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.badge-1 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 8px;
+    background-color: gold;
+    border-radius: 5px;
+    object-position: start;
+}
+
+.badge-2 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 8px;
+    background-color: silver;
+    border-radius: 5px;
+    object-position: start;
+}
+
+.badge-3 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 8px;
+    background-color: #CD7F32;
+    border-radius: 5px;
+    object-position: start;
 }

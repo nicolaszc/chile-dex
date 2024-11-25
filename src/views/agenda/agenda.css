@@ -1,0 +1,150 @@
+/* parte superior*/
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    align-self: center;
+}
+
+/*dropdowns*/
+
+.ubicacion{
+    font-weight: 700;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: black;
+}
+
+.custom-dropdown .dropdown-toggle {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    text-align: left; /* Asegura el texto alineado a la izquierda */
+    width: 80%; /* Hace que ocupe todo el contenedor */
+    margin-left: 15px;
+}
+  
+/* Opciones dentro del dropdown */
+
+.custom-dropdown .dropdown-menu {
+    width: 80%; /* Igual ancho que el toggle */
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc !important;
+}
+  
+.custom-dropdown .dropdown-item {
+    color: #333;
+}
+  
+.custom-dropdown .dropdown-item:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el ratón */
+}
+
+/* calendario para selección de fecha*/
+
+.date, .horario {
+    font-weight: 700;
+    margin-top: 10px; /* Espaciado para separar del dropdown */
+    color: black; /* Color del texto */
+    text-align: left;
+}
+
+.datepicker{
+    text-align: left;
+    margin-left: 5px;
+}
+
+.custom-datepicker {
+    width: 320px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* selección de horas*/
+
+.horas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+.etapa {
+    text-align: left;
+}
+  
+.etapa-titulo {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hours{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hora-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.hora-button.selected {
+    background-color: #007bff;
+    color: white;
+}
+  
+.hora-button:disabled {
+    background-color: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/*cantidad patrimonios a visitar*/
+
+  
+.button-group .btn {
+    margin: 0 8px;              /* Espaciado entre los botones */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para los estilos */
+}
+  
+.button-group .btn:hover {
+    background-color: var(--primary-color);  /* Efecto al pasar el cursor */
+}
+
+.toolbar-cantidad{
+    display: flex;
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    width: 100%;  
+}
+
+.button-group button{
+    border-color: var(--primary-color);
+    color: black;
+}
+
+.next-button button{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 48px;
+    font-weight: 600;
+}

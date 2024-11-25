@@ -12,7 +12,7 @@ import { useTwitterConnection} from '@ekaruz/react-social-auth'
 import useToken from '@/components/auth/useToken'
 
 import { Button, Form } from 'react-bootstrap'
-import Logo from '@/assets/img/logo_chiledex.svg'
+import Logo from '@/assets/img/logo-nuevo_chiledex.svg'
 import FacebookIcon from '@/assets/img/facebook-icon.svg'
 import XIcon from '@/assets/img/x-icon.svg'
 import GoogleIcon from '@/assets/img/google-icon.svg'
