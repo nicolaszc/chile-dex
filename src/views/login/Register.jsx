@@ -7,7 +7,7 @@ import { useEffect, useState, useRef } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 import { Button, Form } from 'react-bootstrap'
-import Logo from '@/assets/img/logo_chiledex.svg'
+import Logo from '@/assets/img/logo-nuevo_chiledex.svg'
 import { Eye, EyeSlash } from 'react-bootstrap-icons'
 import './login.css'
 

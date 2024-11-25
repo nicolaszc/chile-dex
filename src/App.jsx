@@ -12,7 +12,7 @@ import Home from '@/views/home/Home'
 import Heritage from '@/views/heritage/Heritage'
 import Agenda from '@/views/agenda/Agenda'
 import Profile from '@/views/profile/Profile'
-import Visited from '@/views/heritage/Visited'
+import Visited from '@/views/visited/Visited'
 import useToken from '@/components/auth/useToken'
 
 import '@/App.css'
