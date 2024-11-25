@@ -125,7 +125,7 @@ function Login(){
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-4 mb-0'><NavLink to='/recovery' >¿Olvidaste tu contraseña2?</NavLink></p>
+                        <p className='mt-4 mb-0'><NavLink to='/recovery' >¿Olvidaste tu contraseña.?</NavLink></p>
                         <p className='mt-4 mb-0'>o</p>
                     </Col>
                     
