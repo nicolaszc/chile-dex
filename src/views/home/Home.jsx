@@ -1,11 +1,10 @@
 import React from 'react'
-/*import OwlCarousel from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css' */
+
 import { Row, Col, Button } from 'react-bootstrap'
 import { NavLink, useLocation } from 'react-router-dom'
 import Wrapper from '@/layouts/Wrapper';
-import HomeGallery from '@/layouts/HomeGallery';
+import WrapperFluid from '@/layouts/WrapperFluid';
+import Carousel from '@/components/carousel/Carousel';
 
 import iconoPatrimonio from '@/assets/img/building-columns-solid.svg'
 import iconoRuta from '@/assets/img/route-solid.svg'
@@ -17,7 +16,9 @@ import Embalseyeso from '@/assets/img/elyeso.png'
 import Santalucia from '@/assets/img/santa-lucia.png'
 import Moneda from '@/assets/img/palacio-moneda.png'
 import Museomemoria from '@/assets/img/museo-memoria.png'
-
+import Carousel1 from '@/assets/img/carousel-1.png'
+import Carousel2 from '@/assets/img/carousel-2.png'
+import Carousel3 from '@/assets/img/carousel-3.png'
 
 import './home.css'
 
@@ -25,7 +26,7 @@ function Home() {
     
     return (
         <>
-        <Wrapper>
+        <Wrapper className='pb-0'>
             <Row>
                 <Col xs={{ span: 8, offset: 2 }} className='my-3'><img src={Logo} className='w-50 mx-auto' /></Col>
             </Row>
@@ -46,7 +47,24 @@ function Home() {
                                               
                     </NavLink>
                 </Col>
-            </Row> 
+            </Row>
+        </Wrapper> 
+        <WrapperFluid>
+            <Row className='mt-4'>
+                <Carousel>
+                    <div className='pe-2'>
+                        <img src={Carousel1} className='w-100 rounded-4' />
+                    </div>
+                    <div className='pe-2'>
+                        <img src={Carousel2} className='w-100 rounded-4' />
+                    </div>
+                    <div className='pe-2'>
+                        <img src={Carousel3} className='w-100 rounded-4' />
+                    </div>
+                </Carousel>
+            </Row>
+        </WrapperFluid>
+        <Wrapper> 
             <Row>
                 <Col>
                     <div className='w-100 rounded-4 overflow-hidden my-4 chart'>
@@ -55,7 +73,7 @@ function Home() {
                 </Col>
             </Row>
             <Row className='mt-4'>
-                <Col xs={12} className='mb-1'>
+                <Col xs={12} className='mb-4'>
                     <h2 className='text-start mb-3'>Patrimonios más visitados en Santiago</h2>
                     {/* 1er lugar */}
                     <div className='image-holder overflow-hidden mt-4'>
@@ -66,7 +84,7 @@ function Home() {
                         <div className='badge-1 m-2'>1°</div>
                     </div>
                 </Col>
-                <Col xs={6} className='mb-2'>
+                <Col xs={6} className='mb-4'>
                     {/* 2do lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Moneda} className='w-100 rounded-4' />
@@ -76,7 +94,7 @@ function Home() {
                         <div class="badge-2 m-2">2°</div>
                     </div>
                 </Col>
-                <Col xs={6} className='mb-2'>
+                <Col xs={6} className='mb-4'>
                     {/* 3er lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Museomemoria} className='w-100 rounded-4' />
@@ -87,11 +105,11 @@ function Home() {
                     </div>
                 </Col>
             </Row>
-            <Row className='mt-3'>
-                <Col xs={12} className='mb-1'>
+            <Row className='mt-4'>
+                <Col xs={12} className='mb-4'>
                     <h2 className='text-start mb-3'>Patrimonios más visitados en la Región Metropolitana</h2>
                     {/* 1er lugar */}
-                    <div className='image-holder overflow-hidden mt-4'>
+                    <div className='image-holder rounded-4 overflow-hidden mt-4'>
                         <img src={Santalucia} className='w-100 rounded-4' />
                         <div className='text-overlay w-100 p-2'>
                             <p className='mb-0'>Cerro Sta. Lucia</p>
@@ -99,7 +117,7 @@ function Home() {
                         <div className='badge-1 m-2'>1°</div>
                     </div>
                 </Col>
-                <Col xs={6} className='mb-2'>
+                <Col xs={6} className='mb-4'>
                     {/* 2do lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Bellavista} className='w-100 rounded-4' />
@@ -109,7 +127,7 @@ function Home() {
                         <div class="badge-2 m-2">2°</div>
                     </div>
                 </Col>
-                <Col xs={6} className='mb-2'>
+                <Col xs={6} className='mb-4'>
                     {/* 3er lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Embalseyeso} className='w-100 rounded-4' />

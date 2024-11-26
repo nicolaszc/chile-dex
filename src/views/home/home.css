@@ -28,30 +28,26 @@
 
 .image-holder{
     object-fit: cover;
-    height: 175px;
     position: relative;
 }
 
 .image-holder-mini{
     object-fit: cover;
-    height: 150px;
-    width: 191px;
     position: relative;
 }
 
 .text-overlay{
     position: absolute;
-    top: 40%;
-    bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    bottom: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
-    padding: 5px;
-    border-radius: 10px;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
 }
 
 .badge-1 {

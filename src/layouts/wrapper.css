@@ -1,6 +1,8 @@
 .wrapper{
     position: relative;
-    z-index: 1;
+    z-index: 1;  
+}
+#root .wrapper:last-of-type{
     padding-bottom: 120px;
 }
 .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl{
