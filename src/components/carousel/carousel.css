@@ -1,0 +1,28 @@
+.slick-dots{
+    list-style: none!important;
+    display: flex!important;
+    justify-content: center!important;
+    margin: 8px 0 0;
+    padding: 0 20px 0 0;
+}
+.slick-dots li{
+    display: inline-block;
+}
+.slick-dots li button{
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    background-color: #ccc;
+    margin: 0 3px;
+}
+.slick-dots li.slick-active button{
+    background-color: var(--primary-color);
+}
