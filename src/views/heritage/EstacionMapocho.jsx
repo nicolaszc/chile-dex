@@ -7,14 +7,14 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import './heritage.css'
 
-function CasaColorada() {
+function EstacionMapocho() {
 
     return (
         <>
         <Wrapper>
             <Row>
                 <Col className='mt-5'>
-                    <h1>Casa Colorada</h1>
+                    <h1>Estación Mapocho</h1>
                    
                     
                 </Col>                   
@@ -23,4 +23,4 @@ function CasaColorada() {
         </>
     )
 }
-export default CasaColorada
+export default EstacionMapocho
