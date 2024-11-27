@@ -3,6 +3,7 @@
 }
 .qr-container path {
     stroke: var(--primary-color); 
+    stroke-width:8px;
   }
   .qr-scanner p{
     font-size: 14px;
