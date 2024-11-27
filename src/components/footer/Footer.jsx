@@ -40,7 +40,7 @@ function Footer() {
             <Stack direction='horizontal' className='justify-content-around align-items-center py-2'>
                 <NavLink to='/home' className='d-inline-block text-center menu-item' ><House size='30'/><small>Inicio</small></NavLink>
                 <NavLink to='/heritage' className='d-inline-block text-center menu-item'><Map size='30'/><small>Patrimonio</small></NavLink>
-                <NavLink to='/' className='icon-qr-button'><img src={QrIcon} /></NavLink>
+                <NavLink to='/qrscanner' className='icon-qr-button'><img src={QrIcon} /></NavLink>
                 <NavLink to='/agenda' className='d-inline-block text-center menu-item'><CalendarWeek size='30'/><small>Agendar</small></NavLink>
                 <NavLink to='/profile' className='d-inline-block text-center menu-item'><PersonCircle size='30'/><small>Perfil</small></NavLink>
             </Stack>

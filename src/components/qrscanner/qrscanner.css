@@ -1,0 +1,14 @@
+.qr-container {
+    border: 10px var(--primary-color) solid
+}
+.qr-container path {
+    stroke: var(--primary-color); 
+    stroke-width:8px;
+  }
+  .qr-scanner p{
+    font-size: 14px;
+  }
+  .qr-scanner h3{
+    font-size: 22px;
+    font-weight: 600;
+  }
