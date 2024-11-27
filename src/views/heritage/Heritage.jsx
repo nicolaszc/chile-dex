@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
 import './heritage.css'
 
 const libraries = ['places'];
@@ -129,7 +129,9 @@ const Heritage = () => {
         center={center}
         options={options}
       >
-        <Marker position={center} />
+        <MarkerF position={{lat: -33.432, lng: -70.654}} />
+        <MarkerF position={{lat: -33.437, lng: -70.673}} />
+        <MarkerF position={{lat: -33.440, lng: -70.644}} />
       </GoogleMap>
     </div>
   );
