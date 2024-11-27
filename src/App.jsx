@@ -10,6 +10,9 @@ import Register from '@/views/login/Register'
 import Recovery from '@/views/login/Recovery'
 import Home from '@/views/home/Home'
 import Heritage from '@/views/heritage/Heritage'
+import Yungay from '@/views/heritage/Yungay'
+import CasaColorada from '@/views/heritage/CasaColorada'
+import SantaLucia from '@/views/heritage/SantaLucia'
 import Agenda from '@/views/agenda/Agenda'
 import Profile from '@/views/profile/Profile'
 import Visited from '@/views/visited/Visited'
@@ -45,6 +48,9 @@ function App() {
           <Route path='/profile' element={<Profile />} />  
           <Route path='/visited' element={<Visited />} /> 
           <Route path='/qrscanner' element={<QrScanner />} />   
+          <Route path='/yungay' element={<Yungay />} /> 
+          <Route path='/casa-colorada' element={<CasaColorada />} /> 
+          <Route path='/santa-lucia' element={<SantaLucia />} /> 
       </Routes> 
   
   );
