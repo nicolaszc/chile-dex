@@ -5,14 +5,15 @@ import Wrapper from '@/layouts/Wrapper';
 
 
 function QrScanner() {
-
+    
     const handleScan = (result) => {
+        let newTab = window.open()
         if (result?.[0]?.rawValue) {
           console.log(result[0].rawValue);
-          window.open(result[0].rawValue, "_blank", "noreferrer");
+          window.location.href=result[0].rawValue;
         } else if (result?.rawValue) {
           console.log(result.rawValue);
-          window.open(result.rawValue, "_blank", "noreferrer");
+          window.location.href=result.rawValue;
         } else {
           console.log("No data found");
         }
