@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useCallback} from 'react'
+import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import { Row, Col } from 'react-bootstrap'
 import Wrapper from '@/layouts/Wrapper';
 //import { useRouter } from 'next/router'
@@ -20,7 +21,7 @@ import { Eye, EyeSlash } from 'react-bootstrap-icons'
 import './login.css'
 
 function Login(){
-
+    const handle = useFullScreenHandle()
     const [usermail, setMail] = useState('')
     const [password, setPassword] = useState('')
     const [validate, setValidate] = useState('')
@@ -104,6 +105,7 @@ function Login(){
     
     return (
         <>
+        <FullScreen handle={handle}>
             <Wrapper>
                 <Row>
                     <Col xs={{ span: 8, offset: 2 }} className='mt-4 mb-4 px-4'>
@@ -131,7 +133,7 @@ function Login(){
                     
                     <Col xs={{ span: 10, offset: 1 }} className='mt-4 mb-4'>
 
-                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' onClick={handleSubmit} >
+                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' onClick={handle.enter} >
                             <img src={FacebookIcon} className='me-2' /> Continuar con Facebook
                         </Button>
 
@@ -147,7 +149,8 @@ function Login(){
 
                     <p className='mb-0'>¿No tienes cuenta? <NavLink to='/register' >Regístrate</NavLink></p>
                 </Row> 
-            </Wrapper>                    
+            </Wrapper> 
+        </FullScreen>                   
         </>
     )
 }    
