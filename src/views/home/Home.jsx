@@ -52,14 +52,29 @@ function Home() {
         <WrapperFluid>
             <Row className='mt-4'>
                 <Carousel>
-                    <div className='pe-2'>
+                    <div className='pe-2 carousel-slide'>
                         <img src={Carousel1} className='w-100 rounded-4' />
+                        <div className='overlay'>
+                            <h3>Patrimonio Virtual:</h3>
+                            <p>Visita los recorridos patrimoniales más relevantes del país de manera inmersiva en {' '} <a href='https://patrimoniovirtual.gob.cl'>patrimoniovirtual.gob.cl</a>
+                            </p>
+                        </div>
                     </div>
-                    <div className='pe-2'>
+                    <div className='pe-2 carousel-slide'>
                         <img src={Carousel2} className='w-100 rounded-4' />
+                        <div className='overlay'>
+                            <h3>Recorridos sonoros:</h3>
+                            <p>Sumérgete en las historias de diversos patrimonios del país con los recorridos sonores disponibles en {' '} <a href='https://patrimoniovirtual.gob.cl/recorridos-sonoros-2'>patrimoniovirtual.gob.cl</a>
+                            </p>
+                        </div>
                     </div>
-                    <div className='pe-2'>
+                    <div className='pe-2 carousel-slide'>
                         <img src={Carousel3} className='w-100 rounded-4' />
+                        <div className='overlay'>
+                            <h3>Cartelera patrimonial:</h3>
+                            <p>Explora las diversas actividades y muestras culturales de todo el país disponibles en {' '} <a href='https://www.patrimoniocultural.gob.cl/cartelera/red-nacional'>patrimoniocultural.gob.cl</a>
+                            </p>
+                        </div>
                     </div>
                 </Carousel>
             </Row>

@@ -1,0 +1,6 @@
+.qr-container {
+    border: 10px var(--primary-color) solid
+}
+.qr-container path {
+    stroke: var(--primary-color); 
+  }

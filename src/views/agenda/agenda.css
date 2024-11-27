@@ -117,9 +117,16 @@
 
 /*cantidad patrimonios a visitar*/
 
+.button-group {
+    display: flex;
+    gap: 12px; 
+    justify-content: end;                /* Espacio fijo entre botones */
+}
   
 .button-group .btn {
-    margin: 0 8px;              /* Espaciado entre los botones */
+    margin: 0 8px;
+    width: 40px;                /* Ancho fijo para los botones */
+    height: 40px;             /* Espaciado entre los botones */
     transition: background-color 0.3s, color 0.3s; /* Transición suave para los estilos */
 }
   
@@ -129,9 +136,10 @@
 
 .toolbar-cantidad{
     display: flex;
-    justify-content: center;   /* Centra horizontalmente */
-    align-items: center;        /* Centra verticalmente */
-    width: 100%;  
+    justify-content: right;   /* Centra horizontalmente */
+    align-items: flex-end;        /* Centra verticalmente */
+    width: 81%;
+    margin: 0 auto; 
 }
 
 .button-group button{
@@ -139,12 +147,19 @@
     color: black;
 }
 
+.next-button {
+    display: flex;
+    justify-content: center;    /* Centra el botón siguiente */
+    margin-top: 20px;           /* Espaciado superior */
+}
+
 .next-button button{
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: white;
     text-align: center;
-    width: 70%;
+    width: 200px;
     height: 48px;
     font-weight: 600;
+    margin: 0 auto;
 }
