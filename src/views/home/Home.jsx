@@ -91,7 +91,7 @@ function Home() {
                 <Col xs={12} className='mb-4'>
                     <h2 className='text-start mb-3'>Patrimonios más visitados en Santiago</h2>
                     {/* 1er lugar */}
-                    <div className='image-holder overflow-hidden mt-4'>
+                    <div className='image-holder overflow-hidden mt-4 rounded-4'>
                         <img src={Santalucia} className='w-100 rounded-4' />
                         <div className='text-overlay w-100 p-2'>
                             <p className='mb-0'>Cerro Sta. Lucia</p>

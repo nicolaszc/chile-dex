@@ -1,16 +1,3 @@
-.heritage .wrapper, .heritage .container{
-    padding: 0!important;
-}
-.mapa{
-    width: 100vw;
-    height: 100vh;
-    overflow: scroll;
-    position: relative;
-}
-.mapa img{
-    width: 420%;
-    height: auto;
-    left: -160%;
-    top: -20%;
-    object-fit: fill;
+.gmnoprint.gm-bundled-control{
+  bottom:175px!important;
 }
