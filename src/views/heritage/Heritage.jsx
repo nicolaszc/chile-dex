@@ -45,10 +45,6 @@ const options = {
       stylers: [{ color: "#6b9a76" }],
     },
     {
-      featureType: "poi.point_of_interest",
-      stylers: [{ visibility: "on" }],
-    },
-    {
       featureType: "poi.business",
       stylers: [{ visibility: "off" }],
     },

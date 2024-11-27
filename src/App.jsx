@@ -14,8 +14,9 @@ import Agenda from '@/views/agenda/Agenda'
 import Profile from '@/views/profile/Profile'
 import Visited from '@/views/visited/Visited'
 import useToken from '@/components/auth/useToken'
-
+import QrScanner from './components/qrscanner/QrScanner'
 import '@/App.css'
+
 
 function App() {
   const { setToken } = useToken();
@@ -42,7 +43,8 @@ function App() {
           <Route path='/heritage' element={<Heritage />} />   
           <Route path='/agenda' element={<Agenda />} /> 
           <Route path='/profile' element={<Profile />} />  
-          <Route path='/visited' element={<Visited />} />  
+          <Route path='/visited' element={<Visited />} /> 
+          <Route path='/qrscanner' element={<QrScanner />} />   
       </Routes> 
   
   );
