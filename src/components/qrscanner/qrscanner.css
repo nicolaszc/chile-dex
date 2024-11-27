@@ -4,3 +4,10 @@
 .qr-container path {
     stroke: var(--primary-color); 
   }
+  .qr-scanner p{
+    font-size: 14px;
+  }
+  .qr-scanner h3{
+    font-size: 22px;
+    font-weight: 600;
+  }

@@ -28,7 +28,7 @@ function Home() {
         <>
         <Wrapper className='pb-0'>
             <Row>
-                <Col xs={{ span: 8, offset: 2 }} className='my-3'><img src={Logo} className='w-50 mx-auto' /></Col>
+                <Col xs={{ span: 8, offset: 2 }} className='my-4'><img src={Logo} className='w-50 mx-auto' /></Col>
             </Row>
             <Row>
                 <Col xs={6} className='d-flex'>
