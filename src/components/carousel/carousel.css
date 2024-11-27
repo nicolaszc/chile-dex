@@ -26,3 +26,53 @@
 .slick-dots li.slick-active button{
     background-color: var(--primary-color);
 }
+
+/* text overlay */
+
+.carousel-slide {
+    position: relative;           /* Necesario para posicionar el overlay */
+    width: 100%;
+    height: 188px;                /* Ajusta según tu diseño */
+}
+  
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;            /* Asegura que la imagen cubra el contenedor */
+    border-radius: 12px;          /* Bordes redondeados (opcional) */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97.5%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen para mejorar el contraste */
+    color: white;                   /* Color del texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    border-radius: 16px;           /* Bordes redondeados para overlay */
+}
+
+.overlay h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.overlay a {
+    color: white;                   /* Color del enlace */
+    text-decoration: underline;
+}
