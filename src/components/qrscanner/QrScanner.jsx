@@ -22,7 +22,7 @@ function QrScanner() {
         <>
             <Wrapper>
                 <Row>
-                    <Col className='mt-5'>
+                    <Col className='mt-4 qr-scanner'>
                         <div className='rounded-4 qr-container mb-5'><Scanner onScan={(result) => handleScan(result)} classNames="custom-scanner" /></div>
                         <h3>Escanea el código QR de la señalética</h3>
                         <p>En un punto del lugar hay un código QR el cual te permitirá desbloquear la información del patrimonio en el que te encuentres.</p>
