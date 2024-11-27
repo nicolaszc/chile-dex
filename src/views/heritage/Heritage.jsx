@@ -1,7 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import Wrapper from '@/layouts/Wrapper';
-import Mapa from '@/assets/img/mapa.png'
+
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import './heritage.css'
 
@@ -15,9 +13,9 @@ const center = {
   lng: -70.650, // default longitude
 };
 const options = {
-  zoomControl:false,
   mapTypeControl: false,
-  scrollwheel: false,
+  scrollwheel: true,
+  zoomControl:true,
   streetViewControl: false,
   fullscreenControl: false,
   styles: [
@@ -131,7 +129,7 @@ const Heritage = () => {
         center={center}
         options={options}
       >
-       {/*  <Marker position={center} /> */}
+        <Marker position={center} />
       </GoogleMap>
     </div>
   );
