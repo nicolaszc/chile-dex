@@ -27,6 +27,7 @@ function Profile() {
             <Row>
                 <Col className='mt-5'>
                     <h1>Perfil</h1>
+                   
                     <NavLink to='/' >
                         <Button variant='primary' type='submit'>
                             Submit
