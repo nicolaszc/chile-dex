@@ -72,7 +72,7 @@ function SantaLucia() {
 
             <Row className='justify-content-center my-4'>
             <Col xs={12} md={8} lg={6} className='d-flex justify-content-center'>
-                    <NavLink to='https://www.patrimoniocultural.gob.cl/multimedia/cerro-santa-lucia' className=' btn btn-outline-primary visit-plan w-100 p-4 rounded-pill'>
+                    <NavLink to='https://www.patrimoniocultural.gob.cl/multimedia/cerro-santa-lucia' target='_blank' className=' btn btn-outline-primary visit-plan w-100 p-4 rounded-pill'>
                             <p className=' mb-0 fw-semibold'>Patrimonio virtual</p>                     
                     </NavLink>
                 </Col>
