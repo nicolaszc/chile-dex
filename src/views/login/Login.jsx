@@ -36,7 +36,8 @@ function Login({callFunction}){
     const validateForm = () => {
         const emailRegex = /\S+@\S+\.\S+/;
         const isEmailValid = emailRegex.test(usermail);
-        const isPasswordValid = password.length > 6; // Example criteria
+        const passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/
+        const isPasswordValid = passRegex.test(password); // Example criteria
         return isEmailValid && isPasswordValid;   
     }
 
@@ -102,9 +103,7 @@ function Login({callFunction}){
     if( twitterData.data != undefined ) {
         console.log("twitterData:::", twitterData)
     }
-    function handleClick() {
-        callFunction()
-    }
+   
     return (
         <>
       
@@ -135,15 +134,15 @@ function Login({callFunction}){
                     
                     <Col xs={{ span: 10, offset: 1 }} className='mt-4 mb-4'>
 
-                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' onClick={handleClick} >
+                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' >
                             <img src={FacebookIcon} className='me-2' /> Continuar con Facebook
                         </Button>
 
-                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3'  onClick={handleSubmit} >
+                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' >
                             <img src={XIcon} className='me-2' /> Continuar con X
                         </Button>
 
-                        <Button id='btn-google' variant='google' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg' onClick={handleSubmit} >
+                        <Button id='btn-google' variant='google' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg' >
                             <img src={GoogleIcon} className='me-2' /> Continuar con Google
                         </Button>
 

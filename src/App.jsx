@@ -50,7 +50,7 @@ function App() {
           <Route path='/home' element={<Home />} /> 
           <Route path='/heritage' element={<Heritage />} />   
           <Route path='/agenda' element={<Agenda />} /> 
-          <Route path='/profile' element={<Profile />} />  
+          <Route path='/profile' element={<Profile callFunction={handle.exit}/>} />  
           <Route path='/visited' element={<Visited />} /> 
           <Route path='/qrscanner' element={<QrScanner />} />   
           <Route path='/yungay' element={<Yungay />} /> 

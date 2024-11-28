@@ -106,30 +106,28 @@ function Agenda() {
                     </Dropdown.Menu>
                 </Dropdown>                
             </Row>
-            <Row className='mt-5 date'>
-                <p className='calendar'>¿Cuándo quieres ir?</p>
-            </Row>
-            <Row className='datepicker'>
-                <Col>
+            
+            <Row className='datepicker mt-5 date'>
+            <p className='calendar'>¿Cuándo quieres ir?</p>
+             
                     <DatePicker
                         selected={selectedDate}
                         onChange={(date) => setSelectedDate(date)}  // Actualiza la fecha seleccionada
                         dateFormat="dd/MM/yyyy"  // Formato de fecha
                         placeholderText="Elige una fecha"
                         className="custom-datepicker"/>
-                </Col>
+               
             </Row>
-            <Row className='mt-5 horario'>
-                <p>¿A que hora quieres ir?</p>
-            </Row>
-            <Row className='horas'>
+            
+            <Row className='horas mt-5 horario'>
+                <p className='mb-0'>¿A que hora quieres ir?</p>
                 {Object.entries(hours).map(([etapa, horas]) => (
                     <Col key={etapa} className='etapa'>
-                        <h4 className='etapa-título'>{etapa.charAt(0).toUpperCase() + etapa.slice(1)}</h4>
+                        <h5 className='etapa-título'>{etapa.charAt(0).toUpperCase() + etapa.slice(1)}</h5>
                         <Col className='hours'>
                             {horas.map((hora) => (
-                                <Button key={hora}
-                                className={`hora-button ${selectedHour === hora ? 'selected' : ''}`}
+                                <Button variant='hora' key={hora}
+                                className={`${selectedHour === hora ? 'selected' : ''}`}
                                 onClick={() => handleHoraClick(hora)}> {hora} </Button>
                             ))}
                         </Col>
@@ -146,7 +144,7 @@ function Agenda() {
             </ButtonToolbar>
             </Row>
             <Row className='next-button mt-5'>
-                <Button className='rounded-pill' variant="info">Siguiente</Button>
+                <Button className='rounded-pill' variant="next">Siguiente</Button>
             </Row>
         </Wrapper>   
     )

@@ -1,7 +1,10 @@
 import React from 'react'
-
+import { NavLink, useNavigate } from 'react-router-dom'
 import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
 import './heritage.css'
+import Iconzt from '@/assets/img/icon-zt.svg'
+import Iconmh from '@/assets/img/icon-mh.svg'
+import Iconmu from '@/assets/img/icon-mu.svg'
 
 const libraries = ['places'];
 const mapContainerStyle = {
@@ -10,7 +13,7 @@ const mapContainerStyle = {
 };
 const center = {
   lat: -33.438, // default latitude
-  lng: -70.650, // default longitude
+  lng: -70.653, // default longitude
 };
 const options = {
   mapTypeControl: false,
@@ -108,6 +111,7 @@ const options = {
   ]
 }
 const Heritage = () => {
+  const navigate = useNavigate()
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: 'AIzaSyDk6EA6QCXPpwoCqJnNyf-EknfaOSmcNkM',
     libraries,
@@ -120,18 +124,20 @@ const Heritage = () => {
   if (!isLoaded) {
     return <div>Loading maps</div>;
   }
-
+  function handleMarkerClick(mpoi){
+    navigate(mpoi)
+  }
   return (
     <div>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
-        zoom={14}
+        zoom={13}
         center={center}
         options={options}
       >
-        <MarkerF position={{lat: -33.432, lng: -70.654}} />
-        <MarkerF position={{lat: -33.437, lng: -70.673}} />
-        <MarkerF position={{lat: -33.440, lng: -70.644}} />
+        <MarkerF position={{lat: -33.4335, lng: -70.654}} icon={Iconmu} onClick={(e)=>handleMarkerClick('/estacion-mapocho')}/>
+        <MarkerF position={{lat: -33.437, lng: -70.673}} icon={Iconzt} onClick={(e)=>handleMarkerClick('/yungay')}/>
+        <MarkerF position={{lat: -33.4425, lng: -70.643}} icon={Iconmh} onClick={(e)=>handleMarkerClick('/santa-lucia')}/>
       </GoogleMap>
     </div>
   );
