@@ -1,3 +1,65 @@
 .gmnoprint.gm-bundled-control{
   bottom:175px!important;
 }
+
+.info-patrimonial p {
+  margin-bottom: 0;
+  text-align: left;
+  align-items: left;
+}
+
+.titulo-ficha h1 {
+  color: #000000;
+  margin-top: 50px;
+  font-size: 34px;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.btn-outline-primary.visit-plan{
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  height: 70px;
+  width: 200px;
+}
+
+.btn-outline-primary.visit-plan p{
+  margin: 0;
+}
+
+.horarios-container {
+  margin-top: 10px;
+  padding: 0px;
+  text-align: left;
+}
+
+.horarios-titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000; /* Color del título */
+}
+
+.horario-detalle p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333; /* Color del texto */
+}
+
+.horario-detalle strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.horario-aviso {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #000; /* Color del aviso */
+}
