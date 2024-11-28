@@ -1,0 +1,11 @@
+.btn-profile{
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    font-weight: 500;
+}
+
+.opciones{
+    text-align: left;
+    font-weight: 500;
+}
