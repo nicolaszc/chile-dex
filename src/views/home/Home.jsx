@@ -103,20 +103,20 @@ function Home() {
                     {/* 2do lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Moneda} className='w-100 rounded-4' />
-                        <div class="text-overlay w-100 p-2">
-                            <p class="mb-0">Palacio de la Moneda</p>
+                        <div className="text-overlay w-100 p-2">
+                            <p className="mb-0">Palacio de la Moneda</p>
                         </div>
-                        <div class="badge-2 m-2">2°</div>
+                        <div className="badge-2 m-2">2°</div>
                     </div>
                 </Col>
                 <Col xs={6} className='mb-4'>
                     {/* 3er lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Museomemoria} className='w-100 rounded-4' />
-                        <div class="text-overlay w-100 p-2">
-                            <p class="mb-0">Museo de la Memoria y los DD.HH</p>
+                        <div className="text-overlay w-100 p-2">
+                            <p className="mb-0">Museo de la Memoria y los DD.HH</p>
                         </div>
-                        <div class="badge-3 m-2">3°</div>
+                        <div className="badge-3 m-2">3°</div>
                     </div>
                 </Col>
             </Row>
@@ -136,20 +136,20 @@ function Home() {
                     {/* 2do lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Bellavista} className='w-100 rounded-4' />
-                        <div class="text-overlay w-100 p-2">
-                            <p class="mb-0">Barrio Bellavista</p>
+                        <div className="text-overlay w-100 p-2">
+                            <p className="mb-0">Barrio Bellavista</p>
                         </div>
-                        <div class="badge-2 m-2">2°</div>
+                        <div className="badge-2 m-2">2°</div>
                     </div>
                 </Col>
                 <Col xs={6} className='mb-4'>
                     {/* 3er lugar */}
                     <div className='image-holder-mini rounded-4 overflow-hidden'>
                         <img src={Embalseyeso} className='w-100 rounded-4' />
-                        <div class="text-overlay w-100 p-2">
-                            <p class="mb-0">Embalse El Yeso</p>
+                        <div className="text-overlay w-100 p-2">
+                            <p className="mb-0">Embalse El Yeso</p>
                         </div>
-                        <div class="badge-3 m-2">3°</div>
+                        <div className="badge-3 m-2">3°</div>
                     </div>
                 </Col>
             </Row>
