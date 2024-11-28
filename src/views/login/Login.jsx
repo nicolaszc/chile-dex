@@ -19,8 +19,8 @@ import GoogleIcon from '@/assets/img/google-icon.svg'
 import { Eye, EyeSlash } from 'react-bootstrap-icons'
 import './login.css'
 
-function Login(){
-
+function Login({callFunction}){
+    
     const [usermail, setMail] = useState('')
     const [password, setPassword] = useState('')
     const [validate, setValidate] = useState('')
@@ -36,7 +36,8 @@ function Login(){
     const validateForm = () => {
         const emailRegex = /\S+@\S+\.\S+/;
         const isEmailValid = emailRegex.test(usermail);
-        const isPasswordValid = password.length > 6; // Example criteria
+        const passRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/
+        const isPasswordValid = passRegex.test(password); // Example criteria
         return isEmailValid && isPasswordValid;   
     }
 
@@ -48,6 +49,7 @@ function Login(){
             return;
         }
         setToken('JMJtzsS61mcxf41RdKjqxCU5Rb6g5jJV9iauY2vZegQq7mpi6q3tjG98GxBZleTh');
+        callFunction()
         navigate("/home")
     }
     
@@ -101,9 +103,10 @@ function Login(){
     if( twitterData.data != undefined ) {
         console.log("twitterData:::", twitterData)
     }
-    
+   
     return (
         <>
+      
             <Wrapper>
                 <Row>
                     <Col xs={{ span: 8, offset: 2 }} className='mt-4 mb-4 px-4'>
@@ -131,15 +134,15 @@ function Login(){
                     
                     <Col xs={{ span: 10, offset: 1 }} className='mt-4 mb-4'>
 
-                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' onClick={handleSubmit} >
+                        <Button id='btn-facebook' variant='facebook' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' >
                             <img src={FacebookIcon} className='me-2' /> Continuar con Facebook
                         </Button>
 
-                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3'  onClick={handleSubmit} >
+                        <Button id='btn-x' variant='x' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg mb-3' >
                             <img src={XIcon} className='me-2' /> Continuar con X
                         </Button>
 
-                        <Button id='btn-google' variant='google' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg' onClick={handleSubmit} >
+                        <Button id='btn-google' variant='google' className='rounded-pill w-100mt-3 rounded-pill w-100 py-2 fw-semibold lh-lg' >
                             <img src={GoogleIcon} className='me-2' /> Continuar con Google
                         </Button>
 
@@ -147,7 +150,8 @@ function Login(){
 
                     <p className='mb-0'>¿No tienes cuenta? <NavLink to='/register' >Regístrate</NavLink></p>
                 </Row> 
-            </Wrapper>                    
+            </Wrapper> 
+       
         </>
     )
 }    

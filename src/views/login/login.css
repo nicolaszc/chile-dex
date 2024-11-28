@@ -1,37 +1,51 @@
-.btn-facebook{
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-    color: var(--primary-bg-text-color);
-  }
-  .btn-x{
-    background-color: #000;
-    border-color: #000;
-    color: var(--primary-bg-text-color);
-  }
-  .btn-x:hover,.btn-x:active{
-    background-color: #999;
-    border-color: #999;
-    color: var(--primary-bg-text-color);
-  }
-  .btn-google{
-    background-color: #f8f9fa;
-    border-color: #aeaeae;
-    color: var(--primary-text-color);
-  }
-  .login-form input[type=email], .login-form input[type=password], .login-form input[type=text]{
-    border-radius: 0;
-    border: none;
-    border-bottom: solid #999 1px;
-    color: var(--primary-text-color);
-    background-color: transparent;
-  }
-  .validate{
-    color: red;
-    width: 100%;
-    text-align: center;
-    bottom: -50px;
-    font-size: 14px;
-  }
-  .login .wrapper{
-    padding-bottom: 50px;
-  }
+.btn-facebook, .btn-facebook:hover, .btn-facebook:active{
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: var(--primary-bg-text-color);
+}
+.btn-x, .btn-x:hover, .btn-x:active{
+  background-color: #000;
+  border-color: #000;
+  color: var(--primary-bg-text-color);
+}
+/*  .btn-x:hover,.btn-x:active{
+  background-color: #999;
+  border-color: #999;
+  color: var(--primary-bg-text-color);
+} */
+.btn-google, .btn-google:hover, .btn-google:active{
+  background-color: #f8f9fa;
+  border-color: #aeaeae;
+  color: var(--primary-text-color);
+}
+.login-form input[type=email], .login-form input[type=password], .login-form input[type=text]{
+  border-radius: 0;
+  border: none;
+  border-bottom: solid #999 1px;
+  color: var(--primary-text-color);
+  background-color: transparent;
+}
+.validate{
+  color: red;
+  width: 100%;
+  text-align: center;
+  bottom: -50px;
+  font-size: 14px;
+}
+.login .wrapper{
+  padding-bottom: 50px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus{
+  -webkit-text-fill-color: var(--primary-text-color)!important;
+  -webkit-box-shadow: 0 0 0px 40rem #f8f9fa inset!important;
+  color: var(--primary-text-color)!important;
+  border-color: #999!important;
+
+}
+.form-control:focus{
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+ 
