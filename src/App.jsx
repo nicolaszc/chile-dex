@@ -1,8 +1,9 @@
-import React from 'react'
 
+import React, {useCallback} from 'react'
+import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import { TwitterCallback } from '@ekaruz/react-social-auth';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
-
+import Footer from './components/footer/Footer'
 import Login from '@/views/login/Login'
 import LoginForm from '@/views/login/wp-login'
 import Handler from '@/components/api/auth'
@@ -29,14 +30,18 @@ function App() {
       token ? <Component {...props} /> : <useNavigate to="/login" />
     )} />
   )
-
+  const handle = useFullScreenHandle()
   const location = useLocation()
   //const { token } = useToken();
-
+  //const [showDescription, setShowDescription] = useState("");
+  function handleShowDescription(e) {
+    console.log("calling from child component");
+    //setShowDescription(e);
+}
   return (
-
+    <FullScreen handle={handle}>
       <Routes location={location} key={location.key}>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<Login callFunction={handle.enter}/>} />
           <Route path='/api/auth' element={<Handler />} />
           <Route path='/register' element={<Register />} />
           <Route path='/recovery' element={<Recovery />} />
@@ -52,7 +57,9 @@ function App() {
           <Route path='/estacion-mapocho' element={<EstacionMapocho />} /> 
           <Route path='/santa-lucia' element={<SantaLucia />} /> 
       </Routes> 
-  
+      <Footer />                   
+      
+  </FullScreen>
   );
     
 }
