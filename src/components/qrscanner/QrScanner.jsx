@@ -8,7 +8,6 @@ import './qrscanner.css'
 function QrScanner() {
     const navigate = useNavigate()
     const handleScan = (result) => {
-        let newTab = window.open()
         if (result?.[0]?.rawValue) {
           console.log(result[0].rawValue);
           navigate(result[0].rawValue)
