@@ -20,7 +20,7 @@ import Profile from '@/views/profile/Profile'
 import Visited from '@/views/visited/Visited'
 import useToken from '@/components/auth/useToken'
 import QrScanner from './components/qrscanner/QrScanner'
-import { Fullscreen, FullscreenExit, XCircle } from 'react-bootstrap-icons'
+import { Fullscreen, FullscreenExit, ArrowLeftCircle } from 'react-bootstrap-icons'
 import '@/App.css'
 
 
@@ -52,7 +52,6 @@ function App() {
     <FullScreen handle={handle} onChange={reportChange}>
       <header className='position-absolute end-0 top-0 me-2 mt-2 z-3'r>
         <span>{iconScreen}</span>
-        <span><XCircle className='ms-2 d-none' size='24' color='#666' onClick={(e)=>navigate('/heritage')}/></span>
       </header>     
       <Routes location={location} key={location.key}>
           <Route path='/' element={<Login callFunction={handle.enter}/>} />

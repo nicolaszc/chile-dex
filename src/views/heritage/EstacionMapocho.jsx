@@ -1,19 +1,23 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { GeoAltFill, HouseDoorFill, TelephoneFill, TicketFill } from 'react-bootstrap-icons';
+import { NavLink, useNavigate } from 'react-router-dom'
+import { GeoAltFill, HouseDoorFill, TelephoneFill, TicketFill, ArrowLeftCircle } from 'react-bootstrap-icons';
 import Wrapper from '@/layouts/Wrapper';
 
 import { Button } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom'
 import './heritage.css'
 
 import Mapocho from '@/assets/img/centro-cultural-mapocho.png'
 
 function EstacionMapocho() {
-
+    const navigate = useNavigate()
+    function handleMarkerClick(page){
+        navigate(page)
+      }
     return (
-
+        <>
+       <span className='position-absolute start-0 top-0 ms-2 mt-2 z-3'><ArrowLeftCircle size='24' color='#666' onClick={(e)=>handleMarkerClick('/heritage')}/></span>
         <Wrapper className="mt-5">
 
             <Row className="mb-4 titulo-ficha">
@@ -71,6 +75,7 @@ function EstacionMapocho() {
             </Row>
             
         </Wrapper> 
+        </>
     )
 }
 export default EstacionMapocho
