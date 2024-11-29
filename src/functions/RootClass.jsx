@@ -15,6 +15,12 @@ function rootClass(){
         document.getElementById('root').classList.add('agenda')  
     }else if(pathname ==='/profile'){       
         document.getElementById('root').classList.add('profile')  
+    }else if(pathname ==='/yungay'){       
+        document.getElementById('root').classList.add('yungay')  
+    }else if(pathname ==='/santa-lucia'){       
+        document.getElementById('root').classList.add('santa-lucia')  
+    }else if(pathname ==='/estacion-mapocho'){       
+        document.getElementById('root').classList.add('estacion-mapocho')  
     }
     
 }
