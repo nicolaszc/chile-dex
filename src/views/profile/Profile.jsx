@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavLink, useNavigate } from 'react-router-dom'
+import { ArrowLeftCircle } from 'react-bootstrap-icons';
 
 
 function Profile({callFunction}) {
@@ -28,6 +29,7 @@ function Profile({callFunction}) {
     }
     return (
         <>
+       
         <Wrapper>
             <Row>
                 <Col className='mt-5'>
