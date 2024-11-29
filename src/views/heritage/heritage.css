@@ -61,3 +61,9 @@
   margin-top: 20px;
   color: #000; /* Color del aviso */
 }
+.heritage .bi-fullscreen, .heritage .bi-fullscreen-exit{
+    fill: #fff!important;
+}
+.santa-licia .bi-x-circl, .yungay .bi-x-circl, .estacion-mapocho .bi-x-circl,{
+    display:inline-block
+}

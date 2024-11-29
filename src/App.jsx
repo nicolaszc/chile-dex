@@ -1,6 +1,7 @@
 
 import React, {useCallback} from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
+import { useEffect, useState, useRef } from 'react'
 import { TwitterCallback } from '@ekaruz/react-social-auth';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import Footer from './components/footer/Footer'
@@ -19,27 +20,40 @@ import Profile from '@/views/profile/Profile'
 import Visited from '@/views/visited/Visited'
 import useToken from '@/components/auth/useToken'
 import QrScanner from './components/qrscanner/QrScanner'
+import { Fullscreen, FullscreenExit, XCircle } from 'react-bootstrap-icons'
 import '@/App.css'
 
 
 function App() {
-  const { setToken } = useToken();
-  const token = 'JMJtzsS61mcxf41RdKjqxCU5Rb6g5jJV9iauY2vZegQq7mpi6q3tjG98GxBZleTh';
-  const PrivateRoute = ({ component: Component, token, ...rest }) => (
-    <Route {...rest} render={props => (
-      token ? <Component {...props} /> : <useNavigate to="/login" />
-    )} />
-  )
+  //const navigate = useNavigate()
+  const [modalClose, setModalClose] = useState('')
   const handle = useFullScreenHandle()
+  const [iconScreen, setIconScreen] = useState(<Fullscreen size='24' color='#666' onClick={handle.enter}/>)
+  
   const location = useLocation()
-  //const { token } = useToken();
-  //const [showDescription, setShowDescription] = useState("");
-  function handleShowDescription(e) {
-    console.log("calling from child component");
-    //setShowDescription(e);
-}
+  //const { pathname } = useLocation();
+  /* if (location == '/yungay' || location == '/santa-lucia' || location == '/estacion-mapocho') {
+    /etModalClose(<XCircle size='24' color='#666' onClick={(e)=>navigate('/heritage')}/>)    
+  }else{
+    setModalClose('')
+  } */
+
+ 
+
+  const reportChange = useCallback((state, handle) => {
+      if(state){
+        setIconScreen(<FullscreenExit size='24' color='#666' onClick={handle.exit}/>)
+      }else{
+        setIconScreen(<Fullscreen size='24' color='#666' onClick={handle.enter}/>)
+      }
+    });
+
   return (
-    <FullScreen handle={handle}>
+    <FullScreen handle={handle} onChange={reportChange}>
+      <header className='position-absolute end-0 top-0 me-2 mt-2 z-3'r>
+        <span>{iconScreen}</span>
+        <span><XCircle className='ms-2 d-none' size='24' color='#666' onClick={(e)=>navigate('/heritage')}/></span>
+      </header>     
       <Routes location={location} key={location.key}>
           <Route path='/' element={<Login callFunction={handle.enter}/>} />
           <Route path='/api/auth' element={<Handler />} />
