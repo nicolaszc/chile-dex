@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { GeoAltFill, HouseDoorFill, TelephoneFill, TicketFill } from 'react-bootstrap-icons';
+import { GeoAltFill, HouseDoorFill, TelephoneFill, TicketFill, ArrowLeftCircle } from 'react-bootstrap-icons';
 import Wrapper from '@/layouts/Wrapper';
 
 import { Button } from 'react-bootstrap'
